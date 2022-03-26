@@ -1,0 +1,27 @@
+.header-area{
+    background-color: rgb(39, 49, 59);
+    color: white;
+    padding: 1.5rem;
+    text-align: justify;
+    text-justify: auto;
+}
+
+.leftside-area{
+    background-color: brown;
+    color: white;
+    padding: 1rem;
+}
+
+.footer-area{
+    background-color: aqua;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    text-justify: auto;
+}
+
+.content-area{
+    min-height: 500px;
+    padding: 2rem;
+    
+}

@@ -1,12 +1,13 @@
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import YaziDetayi from '../../components/YaziDetayi';
-import YaziListesi from "../../components/YaziListesi";
 import Header from '../Header/Header';
 import LeftSide from '../LeftSide/LeftSide';
 import Footer from '../Footer/Footer';
 import './Main.css';
-
+import YaziEkle from '../../components/YaziEkle';
+import YaziDetayi from '../../components/YaziDetayi';
+import YaziListesi from "../../components/YaziListesi";
+import YaziDuzenle from '../../components/YaziDuzenle';
 const Main = () => {
   return (
     <div className='contaniner-fluid'>
@@ -19,13 +20,15 @@ const Main = () => {
         <div className='col-lg-2 col-md-3 col-sm-12 leftside-area'>
           <LeftSide />
         </div>
-          <div className='col-lg-10 col-md-9 col-sm-12 content-area'>
-            <Suspense fallback={<h1>Loading...</h1>}>
-              <Routes>
-                <Route path='/' exact element={<YaziListesi />} />
-                <Route path="posts/:id" element={<YaziDetayi />} />
-              </Routes>
-            </Suspense>
+        <div className='col-lg-10 col-md-9 col-sm-12 content-area'>
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <Routes>
+              <Route path="/" exact element={<YaziListesi />} />
+              <Route path="/posts/:id" exact element={<YaziDetayi />} />
+              <Route path="/yaziekle" element={<YaziEkle />} />
+              <Route path="/post/:id/edit" element={<YaziDuzenle />} />
+            </Routes>
+          </Suspense>
         </div>
         <div className='row'>
           <div className='footer-area'>

@@ -16,6 +16,10 @@ const YaziListesi = (props) => {
 
     return (
         <div className="ui relaxed divided list">
+            <Link to="/yaziekle" className="ui primary button"> Yazi Ekle </Link>
+            {yaziListesi.map((yazi)=>{
+                 
+            })}
             {yaziListesi.map((yazi) => {
                 return (
                     <div className="item" key={yazi.id}>
